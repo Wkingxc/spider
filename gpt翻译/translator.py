@@ -7,7 +7,12 @@ from openai import OpenAI
 
 os.environ["HTTP_PROXY"] = "http://127.0.0.1:7891"
 os.environ["HTTPS_PROXY"] = "http://127.0.0.1:7891"
-client = OpenAI(api_key='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',)
+
+api_key = ''
+with open('key', 'r') as file:
+    api_key = file.readline().strip()
+
+client = OpenAI(api_key=api_key)
 
 prompt = 'please provide a fluent and accurate translation suitable for the Chinese context from English to Chinese of the academic text enclosed in.'
 
