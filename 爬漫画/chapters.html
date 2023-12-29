@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html>
+<body class="">
+    <div id="app">
+        <nav id="navbar" class="navbar navbar-dark bg-ojisan navbar-expand shadow-sm">
+            <div class="container pc-relative">
+                <div id="mb-search-wrapper" class="d-none d-md-none">
+                    <div class="mb-search-content d-flex flex-row">
+                        <form class="form-inline mb-search-form flex-grow-1" method="GET" action="/tim-kiem">
+                            <div class="input-group input-group-sm"><input class="form-control form-control-navbar"
+                                    autocomplete="off" name=q type=search placeholder="Search" aria-label="Search">
+                                <div class="input-group-append"><button class="btn btn-navbar" type=submit><i
+                                            class="fas fa-search"></i></button></div>
+                            </div>
+                        </form><button id="mb-search-close-btn" class="btn btn-navbar ml-1"><i
+                                class="fas fa-times"></i></button>
+                    </div>
+                </div><a class="navbar-brand" href="https://manhwa18.net"><img src=https://manhwa18.net/favicon1.ico
+                        width=30 height=30 class="d-inline-block align-top" style="margin-top: 2px" alt="Manhwa18">
+                    <p class="ml-1 d-none d-md-inline app-name">Manhwa18</p>
+                </a>
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link" data-toggle="dropdown" href="#"
+                                aria-expanded="false"><i class="far fa-books"></i><span
+                                    class="d-none d-lg-inline ml-1">Genre</span></a>
+                            <div class="dropdown-menu manga-mega-menu genres-menu w-100">
+                                <div class="row no-gutters">
+                                    <div class="col-4 col-md-2"><a class="dropdown-item genres-item"
+                                            title="It is a genre with many hot scenes, referring to sex-sensitive issues or scenes of bloody violence .... In general, the story has a bad impact on the psychology of readers under 18 years of age"
+                                            href="/the-loai/adult">Adult</a></div>
+                                    <div class="col-4 col-md-2"><a class="dropdown-item genres-item"
+                                            title="The type of story is adapted by fans or possibly other Mangakas from the original author. Authors who draw Doujinshi often draw on original characters to write stories according to their preferences."
+                                            href="/the-loai/doujinshi">Doujinshi</a></div>
+                                    <div class="col-4 col-md-2"><a class="dropdown-item genres-item"
+                                            title="The genre of romance, in which many female characters like a male protagonist."
+                                            href="/the-loai/harem">Harem</a></div>
+                                    <div class="col-4 col-md-2"><a class="dropdown-item genres-item"
+                                            title="Japanese manga series" href="/the-loai/manga">Manga</a></div>
+                                    <div class="col-4 col-md-2"><a class="dropdown-item genres-item"
+                                            title="Korean comics 19+" href="/the-loai/manhwa">Manhwa</a></div>
+                                    <div class="col-4 col-md-2"><a class="dropdown-item genres-item"
+                                            title="Genre for ages 17+ includes moderate violence, gore, murder, and sex."
+                                            href="/the-loai/mature">Mature</a></div>
+                                    <div class="col-4 col-md-2"><a class="dropdown-item genres-item"
+                                            title="NTR (Netorare) are stories about a certain girl that the male lead is passionately in love with, but she is taken over by supporting characters or villains."
+                                            href="/the-loai/ntr">NTR</a></div>
+                                    <div class="col-4 col-md-2"><a class="dropdown-item genres-item"
+                                            title="Usually stories about love. Here we will take as an example the love between a boy and a girl, besides the feature of this genre is to stimulate your imagination about love."
+                                            href="/the-loai/romance">Romance</a></div>
+                                    <div class="col-4 col-md-2"><a class="dropdown-item genres-item"
+                                            title="As a genre initiated by Korea, most webtoons are full color, this genre has a story page with a vertical frame layout, so viewing it on computers, phones, tablets... feel very comfortable"
+                                            href="/the-loai/webtoon">Webtoon</a></div>
+                                    <div class="col-4 col-md-2"><a class="dropdown-item genres-item"
+                                            title="n extremely successful and influential mode of popular cinema that foregrounds spectacular movement of bodies, vehicles and weapons, and state-of-the-art special effects. These highly dynamic elements"
+                                            href="/the-loai/action">Action</a></div>
+                                    <div class="col-4 col-md-2"><a class="dropdown-item genres-item"
+                                            title="Comedy is a genre of fiction that consists of discourses or works intended to be humorous or amusing by inducing laughter, especially in theatre"
+                                            href="/the-loai/comedy">Comedy</a></div>
+                                    <div class="col-4 col-md-2"><a class="dropdown-item genres-item"
+                                            title="Boy love boy" href="/the-loai/bl">BL</a></div>
+                                    <div class="col-4 col-md-2"><a class="dropdown-item genres-item" title="Horror"
+                                            href="/the-loai/horror">Horror</a></div>
+                                    <div class="col-4 col-md-2"><a class="dropdown-item genres-item"
+                                            title="Korean Raw or Chinese Raw" href="/the-loai/raw">Raw</a></div>
+                                    <div class="col-4 col-md-2"><a class="dropdown-item genres-item" title="Uncen"
+                                            href="/the-loai/uncensore">Uncensore</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item d-inline d-lg-none"><a class="nav-link" data-toggle="dropdown" href="#"
+                                aria-expanded="false"><i class="far fa-stream"></i></a>
+                            <div class="dropdown-menu w-100"><a class="dropdown-item" href="/ranking"><i
+                                        class="far fa-crown"></i><span class="ml-1">Ranking</span></a><a
+                                    class="dropdown-item" href="/history"><i class="fas fa-history"></i><span
+                                        class="ml-1">Reading History</span></a></div>
+                        </li>
+                        <li class="nav-item mr-2 d-none d-lg-inline"><a class="nav-link" href="/ranking"><i
+                                    class="far fa-crown"></i><span class="ml-1">Ranking</span></a></li>
+                        <li class="nav-item mr-2 d-none d-lg-inline"><a class="nav-link" href="/history"><i
+                                    class="fas fa-history"></i><span class="ml-1">History</span></a></li>
+                        <li class="nav-item mr-2 d-none d-lg-inline"><a class="nav-link" href="https://manhwa18.tv/"><i
+                                    class="far fa-books"></i><span class="ml-1">Watch hentai</span></a></li>
+                    </ul>
+                    <ul class="navbar-nav flex-row right-nav-wrapper">
+                        <div class="dropdown-menu search-result">
+                            <ul id="search-list" class="others-list"></ul>
+                        </div>
+                        <li class="nav-item dropdown d-lg-none d-inline-block"><a id="mb-search-icon"
+                                class="nav-link"><i class="fad fa-search"></i></a></li>
+                        <form class="form-inline ml-3 d-none d-md-inline align-self-center position-relative"
+                            method="GET" action="/tim-kiem">
+                            <div class="input-group input-group-sm"><input id="web-search" name=q
+                                    class="form-control form-control-navbar" type=search autocomplete="off"
+                                    placeholder="Search" aria-label="Search">
+                                <div class="input-group-append"><button class="btn btn-navbar" type=submit><i
+                                            class="fas fa-search"></i></button></div>
+                            </div>
+                        </form>
+                        <li class="nav-item mr-2"><a class="nav-link" href="https://manhwa18.net/login"><i
+                                    class="far fa-sign-in"></i><span class="d-none d-lg-inline ml-1">Login</span></a>
+                        </li>
+                        <li class="nav-item d-none d-md-inline"><a class="nav-link"
+                                href="https://manhwa18.net/register"><i class="far fa-user"></i><span
+                                    class="d-none d-lg-inline ml-1">Register</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-wrapper">
+            <div class="btn-back-to-top"><i class="fas fa-angle-double-up"></i></div>
+
+            <div class="container">
+                <div class="row d-md-table w-md-100">
+                    <div class="col-12 col-md-8 float-md-left">
+                        <div class="card card-dark">
+                            <div class="card-body bg-dark p-1">
+                                <section class="feature-section clear">
+                                    <main class="section-body">
+                                        <div class="top-part">
+                                            <div class="row">
+                                                <div class="left-column col-12 col-md-4">
+                                                    <div class="series-cover">
+                                                        <div class="a6-ratio">
+                                                            <div class="content img-in-ratio"
+                                                                style="background-image: url('https://manhwa18.net/storage/images/raw/82062554-3231-4a58-aafa-52b9835b76ce.jpg')">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex flex-column justify-content-between my-2"><a
+                                                            href="/manga/thorns-on-innocence/chap-01-511"><button
+                                                                class="btn btn-default btn-block bg-ojisan mb-1 mb-md-0 text-white">
+                                                                Begin reading </button></a></div>
+                                                </div>
+                                                <div class="col-12 col-md-8">
+                                                    <div class="series-name-group"><span class="series-name"><a
+                                                                href="https://manhwa18.net/manga/thorns-on-innocence">Thorns
+                                                                on Innocence</a></span></div>
+                                                    <div class="series-information">
+                                                        <div class="info-item"><span class="info-name">Other
+                                                                name:</span><span class="info-value "> Thorns on
+                                                                Innocence manhwa </span></div>
+                                                        <div class="info-item"><span
+                                                                class="info-name">Doujinshi:</span><span
+                                                                class="info-value "><a
+                                                                    href="/tim-kiem?doujinshi=Thorns on Innocence engsub">Thorns
+                                                                    on Innocence engsub</a></span></div>
+                                                        <div class="info-item"><span
+                                                                class="info-name">Genre:</span><span
+                                                                class="info-value"><a
+                                                                    href="https://manhwa18.net/genre/adult"><span
+                                                                        class="badge badge-info bg-ojisan mx-1"
+                                                                        data-toggle="tooltip" data-placement="top"
+                                                                        title="It is a genre with many hot scenes, referring to sex-sensitive issues or scenes of bloody violence .... In general, the story has a bad impact on the psychology of readers under 18 years of age">
+                                                                        Adult </span></a><a
+                                                                    href="https://manhwa18.net/genre/manhwa"><span
+                                                                        class="badge badge-info bg-ojisan mx-1"
+                                                                        data-toggle="tooltip" data-placement="top"
+                                                                        title="Korean comics 19+"> Manhwa </span></a><a
+                                                                    href="https://manhwa18.net/genre/mature"><span
+                                                                        class="badge badge-info bg-ojisan mx-1"
+                                                                        data-toggle="tooltip" data-placement="top"
+                                                                        title="Genre for ages 17+ includes moderate violence, gore, murder, and sex.">
+                                                                        Mature </span></a></span></div>
+                                                        <div class="info-item"><span
+                                                                class="info-name">Status:</span><span
+                                                                class="info-value"><a
+                                                                    href="https://manhwa18.net/tinh-trang-on-going">On
+                                                                    going</a></span></div>
+                                                    </div>
+                                                    <div class="col-12 bottom-features">
+                                                        <div class="side-features">
+                                                            <div class="row">
+                                                                <div class="w-20 feature-item"><a id="like"
+                                                                        class="side-feature-button button-like like"><span
+                                                                            class="d-block feature-value"><i
+                                                                                class="far fa-thumbs-up"></i></span><span
+                                                                            class="block feature-name">8</span></a>
+                                                                </div>
+                                                                <div class="w-20 feature-item"><a id="dislike"
+                                                                        class="side-feature-button button-like"><span
+                                                                            class="d-block feature-value"><i
+                                                                                class="far fa-thumbs-down"></i></span><span
+                                                                            class="block feature-name">1</span></a>
+                                                                </div>
+                                                                <div class="w-20 feature-item"><a id="collect"
+                                                                        class="side-feature-button button-follow follow"><span
+                                                                            class="d-block feature-value"><i
+                                                                                class="far fa-heart"></i></span><span
+                                                                            class="block feature-name">106</span></a>
+                                                                </div>
+                                                                <div class="w-20 feature-item">
+                                                                    <div class="series-rating rated"><label
+                                                                            for="open-rating"
+                                                                            class="side-feature-button button-rate"><span
+                                                                                class="d-block feature-value"><i
+                                                                                    class="far fa-star"></i></span><span
+                                                                                class="d-block feature-name"><span
+                                                                                    class="d-none d-md-block">Rating</span><span
+                                                                                    class="d-block d-md-none">4/5</span></span></label><input
+                                                                            type=checkbox id="open-rating">
+                                                                        <div class="series-evaluation clear"><span
+                                                                                class="star-evaluate-item star-5"
+                                                                                data-value="5"><i
+                                                                                    class="fas fa-star"></i></span><span
+                                                                                class="star-evaluate-item star-4"
+                                                                                data-value="4"><i
+                                                                                    class="fas fa-star"></i></span><span
+                                                                                class="star-evaluate-item star-3"
+                                                                                data-value="3"><i
+                                                                                    class="fas fa-star"></i></span><span
+                                                                                class="star-evaluate-item star-2"
+                                                                                data-value="2"><i
+                                                                                    class="fas fa-star"></i></span><span
+                                                                                class="star-evaluate-item star-1"
+                                                                                data-value="1"><i
+                                                                                    class="fas fa-star"></i></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="w-20 feature-item"><label for="open-sharing"
+                                                                        class="side-feature-button"><span
+                                                                            class="d-block feature-value"><i
+                                                                                class="fas fa-share-alt"></i></span><span
+                                                                            class="d-block feature-name"><span
+                                                                                class="d-none d-md-block">Share</span><span
+                                                                                class="d-block d-md-none">Share</span></span></label><input
+                                                                        type=checkbox id="open-sharing">
+                                                                    <div class="sharing-box"><a class="sharing-item"
+                                                                            href="https://www.facebook.com/sharer/sharer.php?u=https://manhwa18.net/manga/thorns-on-innocence"><i
+                                                                                class="fab fa-facebook-f"></i></a><a
+                                                                            class="sharing-item"
+                                                                            href="https://twitter.com/intent/tweet?url=https://manhwa18.net/manga/thorns-on-innocence"><i
+                                                                                class="fab fa-twitter"></i></a></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom-part">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="row statistic-list">
+                                                        <div class="col-4 statistic-item block-wide at-mobile">
+                                                            <div class="statistic-name">Latest reading</div>
+                                                            <div class="statistic-value"><time class="timeago"
+                                                                    title="2023-03-09 07:00:29"
+                                                                    datetime="2023-03-09 07:00:29">2023-03-09 07:00:29
+                                                                </time></div>
+                                                        </div>
+                                                        <div class="col-4 statistic-item">
+                                                            <div class="statistic-name">4 rating </div>
+                                                            <div class="statistic-value">4 <small>/5</small></div>
+                                                        </div>
+                                                        <div class="col-4 statistic-item">
+                                                            <div class="statistic-name">Views</div>
+                                                            <div class="statistic-value">362243</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="summary-wrapper col-12">
+                                                    <div class="series-summary">
+                                                        <h4>Summary</h4>
+                                                        <div class="summary-content">
+                                                            <p>Eun-Hyo has always been sweet and innocent. She grew up
+                                                                constantly smiling. But then one day he came into her
+                                                                life and took that innocence away. This man who’s
+                                                                thirsty for sex and violence. Once there to protect her,
+                                                                his presence has now become a curse. Eun-Hyo needs to
+                                                                escape from this beast at all costs, even if it means
+                                                                killing him… </p>
+                                                        </div>
+                                                        <div class="summary-more d-none more-state">
+                                                            <div class="see_more">View more</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </main>
+                                </section>
+                            </div>
+                        </div>
+                        <script async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script><ins
+                            class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1759057567979942"
+                            data-ad-slot="6666919235" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                        <script> (adsbygoogle = window.adsbygoogle || []).push({});</script>
+                    </div>
+                    <div class="col-12 col-md-4 float-md-right">
+                        <div class="card card-dark">
+                            <div class="card-body bg-dark series-users p-0 m-0">
+                                <div class="series-owner group-mem"><img width=50px height=50px
+                                        src=https://manhwa18.net/storage/images/raw/da8a83a5-af2e-4d48-9ac2-46955131db31.jpg>
+                                    <div class="series-owner-title"><span class="series-owner_name"><a
+                                                href="https://manhwa18.net/member/1">Admin</a></span></div>
+                                </div>
+                                <div class="fantrans-section">
+                                    <div class="fantrans-name">Scanlation</div>
+                                    <div class="fantrans-value"><a
+                                            href="https://manhwa18.net/scanlation/toomics">Toomics</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-dark card-hidden-mb">
+                            <div class="card-header">
+                                <h3 class="card-title"> The same Scan Group </h3>
+                                <div class="card-tools d-block d-md-none"><button type=button class="btn btn-tool"
+                                        data-card-widget="collapse"><i class="fas fa-plus"></i></button></div>
+                            </div>
+                            <div class="card-body bg-dark">
+                                <ul class="others-list">
+                                    <li>
+                                        <div class="others-img no-padding">
+                                            <div class="a6-ratio">
+                                                <div class="content img-in-ratio"
+                                                    style="background-image: url('https://manhwa18.net/storage/images/raw/29388c64-f712-40ad-a3eb-d9d268e85454.jpg')">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="others-info">
+                                            <h5 class="others-name"><a
+                                                    href="https://manhwa18.net/manga/the-unwanted-roommate">The Unwanted
+                                                    Roommate</a></h5><small class="series-summary">I was forced to let
+                                                my friends younger sister live...</small>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="others-img no-padding">
+                                            <div class="a6-ratio">
+                                                <div class="content img-in-ratio"
+                                                    style="background-image: url('https://manhwa18.net/storage/images/raw/5cc4efb3-af3e-4649-b928-b5914b04a1e5.jpg')">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="others-info">
+                                            <h5 class="others-name"><a
+                                                    href="https://manhwa18.net/manga/close-as-neighbors">Close as
+                                                    Neighbors</a></h5><small class="series-summary">Theo has always been
+                                                close with his next door neighbors,...</small>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="others-img no-padding">
+                                            <div class="a6-ratio">
+                                                <div class="content img-in-ratio"
+                                                    style="background-image: url('https://manhwa18.net/storage/images/raw/dd8b7440-b4c1-4c98-883f-54f86b106596.jpg')">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="others-info">
+                                            <h5 class="others-name"><a
+                                                    href="https://manhwa18.net/manga/the-good-manager">The Good
+                                                    Manager</a></h5><small class="series-summary">Im a celebrity
+                                                manager, but Im different. Anyone, even the...</small>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8 float-md-left">
+                        <div class="card card-dark">
+                            <div class="card-header">
+                                <h3 class="card-title"> List chapters (61) </h3>
+                                <div class="card-tools d-block d-md-none"><button type=button class="btn btn-tool"
+                                        data-card-widget="collapse"><i class="fas fa-minus"></i></button></div>
+                            </div>
+
+                             
+                            <div class="card-body bg-dark">
+                                <ul class="list-chapters at-series"><a
+                                        href="https://manhwa18.net/manga/thorns-on-innocence/chap-61-140"
+                                        title="chap 61">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 61 </div>
+                                            <div class="chapter-time">471 view - 09/03/2023</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-60-153"
+                                        title="chap 60">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 60 </div>
+                                            <div class="chapter-time">622 view - 02/03/2023</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-59-159"
+                                        title="chap 59">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 59 </div>
+                                            <div class="chapter-time">441 view - 23/02/2023</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-58-161"
+                                        title="chap 58">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 58 </div>
+                                            <div class="chapter-time">587 view - 16/02/2023</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-57-159"
+                                        title="chap 57">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 57 </div>
+                                            <div class="chapter-time">563 view - 09/02/2023</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-56-164"
+                                        title="chap 56">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 56 </div>
+                                            <div class="chapter-time">655 view - 02/02/2023</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-55-173"
+                                        title="chap 55">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 55 </div>
+                                            <div class="chapter-time">752 view - 26/01/2023</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-54-177"
+                                        title="chap 54">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 54 </div>
+                                            <div class="chapter-time">557 view - 26/01/2023</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-53-176"
+                                        title="chap 53">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 53 </div>
+                                            <div class="chapter-time">774 view - 12/01/2023</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-52-184"
+                                        title="chap 52">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 52 </div>
+                                            <div class="chapter-time">761 view - 05/01/2023</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-51-193"
+                                        title="chap 51">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 51 </div>
+                                            <div class="chapter-time">862 view - 29/12/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-50-212"
+                                        title="chap 50">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 50 </div>
+                                            <div class="chapter-time">1161 view - 22/12/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-49-220"
+                                        title="chap 49">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 49 </div>
+                                            <div class="chapter-time">1375 view - 15/12/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-48-230"
+                                        title="chap 48">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 48 </div>
+                                            <div class="chapter-time">1036 view - 08/12/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-47-235"
+                                        title="chap 47">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 47 </div>
+                                            <div class="chapter-time">838 view - 01/12/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-46-236"
+                                        title="chap 46">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 46 </div>
+                                            <div class="chapter-time">886 view - 24/11/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-45-236"
+                                        title="chap 45">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 45 </div>
+                                            <div class="chapter-time">1205 view - 17/11/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-44-244"
+                                        title="chap 44">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 44 </div>
+                                            <div class="chapter-time">1000 view - 11/11/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-43-247"
+                                        title="chap 43">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 43 </div>
+                                            <div class="chapter-time">1196 view - 03/11/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-42-252"
+                                        title="chap 42">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 42 </div>
+                                            <div class="chapter-time">926 view - 03/11/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-41-256"
+                                        title="chap 41">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 41 </div>
+                                            <div class="chapter-time">978 view - 20/10/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-40-265"
+                                        title="chap 40">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 40 </div>
+                                            <div class="chapter-time">1050 view - 13/10/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-39-278"
+                                        title="chap 39">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 39 </div>
+                                            <div class="chapter-time">977 view - 06/10/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-38-281"
+                                        title="chap 38">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 38 </div>
+                                            <div class="chapter-time">908 view - 29/09/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-37-285"
+                                        title="chap 37">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 37 </div>
+                                            <div class="chapter-time">987 view - 22/09/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-36-284"
+                                        title="chap 36">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 36 </div>
+                                            <div class="chapter-time">1111 view - 15/09/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-35-288"
+                                        title="chap 35">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 35 </div>
+                                            <div class="chapter-time">1115 view - 08/09/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-34-296"
+                                        title="chap 34">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 34 </div>
+                                            <div class="chapter-time">1054 view - 01/09/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-33-301"
+                                        title="chap 33">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 33 </div>
+                                            <div class="chapter-time">1192 view - 25/08/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-32-312"
+                                        title="chap 32">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 32 </div>
+                                            <div class="chapter-time">1201 view - 18/08/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-31-317"
+                                        title="chap 31">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 31 </div>
+                                            <div class="chapter-time">1168 view - 11/08/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-30-325"
+                                        title="chap 30">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 30 </div>
+                                            <div class="chapter-time">1408 view - 04/08/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-29-331"
+                                        title="chap 29">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 29 </div>
+                                            <div class="chapter-time">1527 view - 28/07/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-28-340"
+                                        title="chap 28">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 28 </div>
+                                            <div class="chapter-time">1360 view - 21/07/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-27-351"
+                                        title="chap 27">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 27 </div>
+                                            <div class="chapter-time">1345 view - 21/07/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-26-355"
+                                        title="chap 26">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 26 </div>
+                                            <div class="chapter-time">1236 view - 21/07/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-25-351"
+                                        title="chap 25">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 25 </div>
+                                            <div class="chapter-time">1490 view - 01/07/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-24-363"
+                                        title="chap 24">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 24 </div>
+                                            <div class="chapter-time">1217 view - 01/07/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-23-363"
+                                        title="chap 23">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 23 </div>
+                                            <div class="chapter-time">1948 view - 16/06/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-22-367"
+                                        title="chap 22">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 22 </div>
+                                            <div class="chapter-time">1387 view - 16/06/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-21-375"
+                                        title="chap 21">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 21 </div>
+                                            <div class="chapter-time">1729 view - 16/06/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-20-384"
+                                        title="chap 20">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 20 </div>
+                                            <div class="chapter-time">1664 view - 16/06/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-19-394"
+                                        title="chap 19">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 19 </div>
+                                            <div class="chapter-time">7369 view - 16/06/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-18-394"
+                                        title="chap 18">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 18 </div>
+                                            <div class="chapter-time">1749 view - 16/06/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-17-403"
+                                        title="chap 17">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 17 </div>
+                                            <div class="chapter-time">2109 view - 16/06/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-16-411"
+                                        title="chap 16">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 16 </div>
+                                            <div class="chapter-time">1658 view - 16/06/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-15-410"
+                                        title="chap 15">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 15 </div>
+                                            <div class="chapter-time">1641 view - 16/06/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-14-424"
+                                        title="chap 14">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 14 </div>
+                                            <div class="chapter-time">1630 view - 16/06/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-13-431"
+                                        title="chap 13">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 13 </div>
+                                            <div class="chapter-time">1985 view - 16/06/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-12-439"
+                                        title="chap 12">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 12 </div>
+                                            <div class="chapter-time">1700 view - 16/06/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-11-443"
+                                        title="chap 11">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 11 </div>
+                                            <div class="chapter-time">1923 view - 16/06/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-10-450"
+                                        title="chap 10">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 10 </div>
+                                            <div class="chapter-time">1954 view - 16/06/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-09-454"
+                                        title="chap 09">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 09 </div>
+                                            <div class="chapter-time">1780 view - 16/06/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-08-471"
+                                        title="chap 08">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 08 </div>
+                                            <div class="chapter-time">2096 view - 16/06/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-07-482"
+                                        title="chap 07">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 07 </div>
+                                            <div class="chapter-time">1997 view - 16/06/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-06-495"
+                                        title="chap 06">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 06 </div>
+                                            <div class="chapter-time">1952 view - 16/06/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-05-496"
+                                        title="chap 05">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 05 </div>
+                                            <div class="chapter-time">2083 view - 16/06/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-04-503"
+                                        title="chap 04">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 04 </div>
+                                            <div class="chapter-time">2082 view - 16/06/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-03-513"
+                                        title="chap 03">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 03 </div>
+                                            <div class="chapter-time">2455 view - 16/06/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-02-515"
+                                        title="chap 02">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 02 </div>
+                                            <div class="chapter-time">2875 view - 16/06/2022</div>
+                                        </li>
+                                    </a><a href="https://manhwa18.net/manga/thorns-on-innocence/chap-01-511"
+                                        title="chap 01">
+                                        <li>
+                                            <div class="chapter-name text-truncate"> chap 01 </div>
+                                            <div class="chapter-time">3926 view - 16/06/2022</div>
+                                        </li>
+                                    </a></ul>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="disqus_thread"></div><noscript>Please enable JavaScript to view the <a
+                    href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </main>
+    </div>
+
+
+
+
+    <footer id="footer">
+        <div class="container"><span class="float-right">Liên hệ quảng cáo: <a
+                    href="/cdn-cgi/l/email-protection#cfaeaba2a6a18faab7aea2bfa3aae1aca0a2" target="_blank"
+                    style="color: #FFBF00 !important;"><span class="__cf_email__"
+                        data-cfemail="f392979e9a9db3968b929e839f96dd909c9e">[email&#160;protected]</span></a></span><span>©
+                2019 My Manga - Design by NhanMa5213</span></div>
+    </footer>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src=https://manhwa18.net/vendor/alertify/alertify.min.js></script>
+    <script src=https://manhwa18.net/js/app.js></script>
+    <script src=https://manhwa18.net/vendor/adminlte/dist/js/adminlte.min.js></script>
+    <script src=https://manhwa18.net/js/manga.js></script>
+    <script> (function () { var d = document, s = d.createElement('script'); s.src = 'https://manhwa18-1.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })(); </script>
+    <script async src=https://www.googletagmanager.com/gtag/js?id=UA-145119379-1></script>
+    <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-145119379-1');</script>
+    <div id="bg_2963164047"></div>
+    <script data-cfasync="false" type=text/javascript
+        src=//platform.bidgear.com/ads.php?domainid=2963&sizeid=16&zoneid=4047></script>
+</body>
+
+</html>

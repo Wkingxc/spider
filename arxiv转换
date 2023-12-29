@@ -1,0 +1,41 @@
+import re
+
+# 从输入字符串中提取arXiv ID的函数
+def extract_arxiv_id(input_string):
+    # 正则表达式，用于匹配arXiv ID的模式
+    arxiv_id_pattern = re.compile(r'(\d{4}\.\d{5})')
+    match = arxiv_id_pattern.search(input_string)
+    if match:
+        return match.group(1)
+    else:
+        raise ValueError("输入的字符串不包含有效的arXiv ID。")
+
+# 根据arXiv ID创建摘要和PDF的URL
+def create_urls(arxiv_id):
+    abs_url = f"https://arxiv.org/abs/{arxiv_id}"
+    pdf_url = f"https://arxiv.org/pdf/{arxiv_id}.pdf"
+    return abs_url, pdf_url
+
+# 打印表格的函数
+def print_table(arxiv_id, abs_url, pdf_url):
+    print('-------------------------------------------')
+    print(f"id: {arxiv_id}")
+    print(f"abs_url: {abs_url}")
+    print(f"pdf_url: {pdf_url}")
+    print('-------------------------------------------')
+
+# 主函数，处理输入并输出表格
+def process_input():
+    while True:
+        input_string = input("请输入arXiv信息:")
+        if input_string.lower() == 'exit':
+            break
+        try:
+            arxiv_id = extract_arxiv_id(input_string)
+            abs_url, pdf_url = create_urls(arxiv_id)
+            print_table(arxiv_id, abs_url, pdf_url)
+        except ValueError as e:
+            print(e)
+
+# 运行主函数
+process_input()
