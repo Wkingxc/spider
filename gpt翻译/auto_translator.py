@@ -19,15 +19,17 @@ class Application(tk.Frame):
         self.master = master
         self.pack(fill=tk.BOTH, expand=True)
         self.create_widgets()
+        self.previous_clipboard = pyperclip.paste()[:10]  # Save the first 10 characters of the clipboard.
+        self.check_clipboard()  # Start checking the clipboard.
 
     def create_widgets(self):
-        self.text = tk.Text(self, font=("微软雅黑", 18))
+        self.text = tk.Text(self, font=("微软雅黑", 16))
         self.text.pack(side="top", fill=tk.BOTH, expand=True)
 
-        self.translate_button = tk.Button(self,width=200,height=100)
-        self.translate_button["text"] = "翻译"
-        self.translate_button["command"] = self.translate
-        self.translate_button.pack(side="bottom")
+        # self.translate_button = tk.Button(self,width=200,height=100)
+        # self.translate_button["text"] = "翻译"
+        # self.translate_button["command"] = self.translate
+        # self.translate_button.pack(side="bottom")
 
     def append_clipboard(self):
         clipboard_content = pyperclip.paste()
@@ -68,7 +70,13 @@ class Application(tk.Frame):
             self.after(1, self.process_next_chunk)  # Call this method again after 1 millisecond.
         except StopIteration:
             pass  # No more chunks in the stream.
-
+    
+    def check_clipboard(self):
+        current_clipboard = pyperclip.paste()[:10]  # Get the first 10 characters of the clipboard.
+        if current_clipboard != self.previous_clipboard:  # If the clipboard has changed...
+            self.previous_clipboard = current_clipboard  # Update the saved clipboard.
+            self.translate()  # Trigger the translate function.
+        self.after(500, self.check_clipboard)  # Check the clipboard again after 1 second.
 
 #告诉操作系统使用程序自身的dpi适配
 ctypes.windll.shcore.SetProcessDpiAwareness(1)
@@ -76,7 +84,7 @@ ctypes.windll.shcore.SetProcessDpiAwareness(1)
 ScaleFactor=ctypes.windll.shcore.GetScaleFactorForDevice(0)
 #设置tkinter的缩放因子
 root = tk.Tk()
-root.geometry("875x1000")
+root.geometry("535x1077")
 root.tk.call('tk', 'scaling', 1.5)
 app = Application(master=root)
 app.mainloop()
