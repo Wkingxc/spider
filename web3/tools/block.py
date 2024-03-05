@@ -28,7 +28,13 @@ class Blockchain:
         """
         生成创世区块并将其添加到区块链。创世区块的索引为0，前一个哈希为0，具有有效的哈希值。
         """
-        genesis_block = Block(0, [], 0, "0")
+        certificate = {
+            "pubkey": "0",
+            # 证书的有效期
+            "validity": 0,
+            "revoked": True
+        }
+        genesis_block = Block(0, certificate, 0, "0")
         genesis_block.hash = genesis_block.compute_hash()
         self.chain.append(genesis_block)
 
